@@ -1,0 +1,32 @@
+name: detect
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Python
+  - python=3.10
+  - pip
+  - numpy>=1.24
+  - scipy>=1.11
+  - pandas>=1.5
+  - matplotlib>=3.8
+  - networkx>=3.2
+  - scikit-learn>=1.3
+  - notebook
+  - ipykernel
+
+  # PyTorch (auto CUDA)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8  # works on modern GPUs (RTX, A100, etc.)
+
+  # Optional utils
+  - tqdm
+  - seaborn
+
+  # pip-only dependencies
+  - pip:
+      - pyvis
